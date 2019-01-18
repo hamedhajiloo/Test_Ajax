@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}<h2>Basic Links & URLs</h2>
+<table>
+    <thead><tr><th>Helper</th><th>Output</th></tr></thead>
+    <tbody>
+        <tr>
+            <td>@Url.Content(Links.Content.Site_css)</td>
+            <td>@Url.Content(Links.Content.Site_css)</td>
+        </tr>
+        <tr>
+            <td>@Html.ActionLink("My Link", MVC.Home.Index())</td>
+            <td>@Html.ActionLink("My Link", MVC.Home.Index())</td>
+        </tr>
+        <tr>
+            <td>Url.Action("GetPeople", "People")</td>
+            <td>@Url.Action(MVC.People.GetPeople())</td>
+        </tr>
+        <tr>
+            <td>
+                @Url.RouteUrl(new { controller = "People", action = "GetPeople" })
+            </td>
+            <td>
+                @Url.RouteUrl(new { controller = "People", action = "GetPeople" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.RouteLink("My Link", MVC.People.GetPeople())
+            </td>
+            <td>
+                @Html.RouteLink("My Link", new { controller = "People", action = "GetPeople" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.RouteLink("My Link", "FormRoute", new { controller = "People", action = "GetPeople" })
+            </td>
+            <td>
+                @*@Html.RouteLink("My Link", "FormRoute", new {controller ="People",action="GetPeople"})*@
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+<br />
+<textarea id="redactor_content" name="content"></textarea>
+
+@section script{
+
+    <script type="text/javascript">
+        $(document).ready(
+            function () {
+                $('#redactor_content').redactor();
+            }
+        );
+    </script>
+
+}

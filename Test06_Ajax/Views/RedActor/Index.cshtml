@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redactor</title>
+    <meta charset="utf-8">
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <link rel="stylesheet" href="~/Content/redactor/redactor.css" />
+    <script src="~/Scripts/redactor/redactor.min.js"></script>
+
+    <script type="text/javascript">
+    		$(document).ready(
+    			function()
+    			{
+    				$('#redactor_content').redactor();
+    			}
+    		);
+    </script>
+</head>
+<body>
+    <textarea id="redactor_content" name="content"></textarea>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿@using Test06_Ajax.Models
+@model string
+@{
+    ViewBag.Title = "GetPeople";
+    Layout = "/Views/Shared/_Layout.cshtml";
+    AjaxOptions ajaxOpts = new AjaxOptions
+    {
+        UpdateTargetId = "tableBody",
+        Url = Url.Action(MVC.People.GetPeopleData()),
+        LoadingElementId = "loading",
+        LoadingElementDuration = 1000,
+        // Confirm = "Do you wish to request new data?"
+    };
+}
+<h2>Get People</h2>
+<div id="loading" class="load" style="display:none">
+    <p>Loading Data...</p>
+</div>
+<table>
+    <thead><tr><th>First</th><th>Last</th><th>Role</th></tr></thead>
+    <tbody id="tableBody">
+        @Html.Action(MVC.People.GetPeopleData(selectedRole:Model))
+    </tbody>
+</table>
+@using (Ajax.BeginForm(ajaxOpts))
+{
+    <div>
+        
+
+            @Html.DropDownList("selectedRole", new SelectList(
+        new [] {"All"}.Concat(Enum.GetNames(typeof(Role)))),new { id="aa"})
+
+
+        <button id="bb" type="submit">Submit</button>
+    </div>
+}
+@section script{
+
+    <script>
+        $(document).ready(function () {
+            $("#aa").change(function () {
+                
+                @*var val1 = document.getElementById("aa").value;
+                
+                @{Html.RenderAction("GetPeopleData",  new { selectedRole =}  );}*@
+                document.getElementById("bb").click();
+                
+            });
+        });
+    </script>
+}

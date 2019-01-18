@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test06_Ajax", "Test06_Ajax\Test06_Ajax.csproj", "{DEC769CD-7DC4-4226-A704-4045779ED707}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEC769CD-7DC4-4226-A704-4045779ED707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC769CD-7DC4-4226-A704-4045779ED707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC769CD-7DC4-4226-A704-4045779ED707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC769CD-7DC4-4226-A704-4045779ED707}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3055570-4AD0-42D5-8762-4C34F823EF68}
+	EndGlobalSection
+EndGlobal
